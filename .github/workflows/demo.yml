@@ -27,11 +27,11 @@ jobs:
         run: npm run build
       - name: dist-files
         uses: actions/upload-artifact@v3
-          with:
-            name: dist-files
-            path: |
-              dist
-              package.xml
+        with:
+          name: dist-files
+          path: |
+            dist
+            package.xml
   deploy:
     needs: build
     runs-on: ubuntu-latest
